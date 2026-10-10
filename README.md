@@ -1,6 +1,6 @@
 # casd
 
-A remote build cache for Bazel, written from scratch in about 700 lines of
+A remote build cache for Bazel, written from scratch in about 800 lines of
 dependency-free Python, with the failure cases tested and the speed-up measured.
 
 I built it to understand build caching from the inside: what a cache has to
