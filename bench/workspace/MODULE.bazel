@@ -1,0 +1,5 @@
+module(name = "casd_bench")
+
+bazel_dep(name = "rules_cc", version = "0.1.1")
+bazel_dep(name = "abseil-cpp", version = "20250127.1")
+bazel_dep(name = "googletest", version = "1.16.0")

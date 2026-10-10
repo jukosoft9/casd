@@ -1,0 +1,34 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
+
+cc_library(
+    name = "records",
+    srcs = ["records.cc"],
+    hdrs = ["records.h"],
+    deps = [
+        "@abseil-cpp//absl/container:flat_hash_map",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/strings:str_format",
+        "@abseil-cpp//absl/time",
+    ],
+)
+
+cc_binary(
+    name = "records_cli",
+    srcs = ["main.cc"],
+    deps = [
+        ":records",
+        "@abseil-cpp//absl/flags:flag",
+        "@abseil-cpp//absl/flags:parse",
+    ],
+)
+
+cc_test(
+    name = "records_test",
+    srcs = ["records_test.cc"],
+    deps = [
+        ":records",
+        "@googletest//:gtest_main",
+    ],
+)

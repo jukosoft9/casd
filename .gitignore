@@ -7,7 +7,6 @@ dist/
 
 # Bazel
 bazel-*
-bench/out/
 
 # Terraform
 .terraform/
