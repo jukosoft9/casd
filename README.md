@@ -1,5 +1,7 @@
 # casd
 
+[![ci](https://github.com/jukosoft9/casd/actions/workflows/ci.yml/badge.svg)](https://github.com/jukosoft9/casd/actions/workflows/ci.yml)
+
 A remote build cache for Bazel, written from scratch in about 800 lines of
 dependency-free Python, with the failure cases tested and the speed-up measured.
 
@@ -118,8 +120,9 @@ bazel build //... --remote_cache=http://127.0.0.1:8080 \
   on an Azure Files share, generated credentials stored as Container Apps
   secrets, optional source IP allow-list, and the image pinned by digest.
 
-Status: the Terraform passes `terraform validate` against azurerm 4.x but has
-not been applied to a subscription, and the image has not been built outside CI.
+Status: CI is green and publishes `ghcr.io/jukosoft9/casd`. The Terraform
+passes `terraform validate` against azurerm 4.x but has not been applied to a
+subscription, so the Azure deployment is untested.
 
 ## Limits
 
